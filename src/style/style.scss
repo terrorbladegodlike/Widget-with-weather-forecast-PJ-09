@@ -1,0 +1,70 @@
+// <ШРИФТЫ>
+
+// <Подключаем шрифты>
+@import url("https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700;900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,300;0,400;0,500;0,600;1,400&display=swap");
+@import "../fonts/Circe/stylesheet.scss";
+
+// </Подключаем шрифты>
+
+// <Шрифт по умолчанию>
+$fontfamily: "Circe", sans-serif;
+// </Шрифт по умолчанию>
+
+
+// <ПЕРЕМЕННЫЕ>
+$light: rgb(254, 255, 249);
+$dark: #090a1a;
+
+$fontColor: rgb(20, 19, 19);
+$fontColorInactive: rgba(136, 131, 131, 0.788);
+
+$backLight: #fff;
+$backGrey: rgb(236, 236, 236);
+$bg: rgb(185, 180, 180);
+// <ОБНУЛЕНИЕ, ОБЩИЕ ПАРАМЕТРЫ>
+@import "_null";
+
+* {
+  scroll-behavior: smooth;
+}
+.root{
+
+  height: 100%;
+
+}
+// <ОБОЛОЧКА>
+.wrapper {
+  background-color: $bg;
+  color: $fontColor;
+  overflow: hidden;
+  min-height: 100%;
+
+  display: grid;
+
+  grid-template: minmax(70px, auto) 1fr minmax(70px, auto)  / minmax(30px, 1fr) minmax(10px, 1452px) minmax(30px, 1fr);
+}
+
+
+// <ПОДКЛЮЧЕНИЕ ФАЙЛОВ СТИЛЕЙ СТРАНИЦ И ЭЛЕМЕНТОВ>
+@import "_mixin";
+
+// подключаю стили для секции с основным контентом
+// подключаю стили для компонентов
+@import "_scrollbar";
+@import "_mod";
+
+
+// базовая расстановка контента на странице
+//* @import "_header";
+@import "_main";
+//* @import "_footer";
+
+@import "./components/widget/_widget";
+@import "./components/widget/_widgetBar";
+@import "./components/widget/_widgetContent";
+@import "./components/card/_card";
+@import "./components/navbar/_navbar";
+@import "./components/weekbar/_weekbar";
+@import "./components/asidebar/_asidebar";
+@import "./components/search/_search";

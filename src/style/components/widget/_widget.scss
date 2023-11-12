@@ -1,0 +1,27 @@
+.widget {
+  // height: 100%;
+
+
+  &__row {
+    background-color: $backLight;
+    border-radius: 40px;
+    // height: 100%;
+    overflow: hidden;
+    display: flex;
+
+    @media (max-width: 867px) {
+      flex-direction: column;
+
+    }
+  }
+
+  &__bar {
+    flex-basis: 35%;
+  }
+
+  &__content {
+    flex-basis: 65%;
+
+    background-color: $backGrey;
+  }
+}
